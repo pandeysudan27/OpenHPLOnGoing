@@ -64,6 +64,8 @@ model BifurcatedPipe "Model of the Bifurcated pipe for two units of turbine"
                              "Volumetric flow rate of water inside surge tank, m^3/s";
   Real V_dot3(start = V_dot0)
                              "Volumetric flow rate of water inside surge tank, m^3/s";
+                             
+//connnector
   extends OpenHPL.Interfaces.ThreeContactPort;
 equation
   //der(m) = 0; // m_dot_i=m_dot_e
@@ -82,6 +84,7 @@ equation
   //p1 = p_1.p;
   //p2 = p_2.p;
   //p3 = p_3.p;
+  // connectors
   p_n = p1;
 
   m_dot=m1_dot;
